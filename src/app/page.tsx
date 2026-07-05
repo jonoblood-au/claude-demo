@@ -17,12 +17,12 @@ export default function Home() {
       <ul className="mt-12 flex flex-col gap-6">
         {posts.map((post) => (
           <li key={post.slug}>
-            <div className="group relative rounded-2xl border border-black/[.08] p-6 transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5 dark:border-white/[.145]">
-              <Link href={`/posts/${post.slug}`} className="text-xl font-medium tracking-tight">
+            <div className="group relative rounded-2xl border border-black/[.08] bg-zinc-50 p-6 transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5 dark:border-white/[.145] dark:bg-zinc-900/50">
+              <Link href={`/posts/${post.slug}`} className="text-xl font-semibold tracking-tight transition-colors group-hover:text-accent">
                 <span className="absolute inset-0" />
                 {post.title}
               </Link>
-              <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+              <p className="mt-1 text-sm text-accent/60 dark:text-accent/50">
                 {new Date(post.date).toLocaleDateString(undefined, {
                   year: "numeric",
                   month: "long",

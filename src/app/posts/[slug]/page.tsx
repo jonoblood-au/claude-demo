@@ -46,7 +46,7 @@ export default async function PostPage({
 
       <article className="mt-6">
         <h1 className="text-3xl font-semibold tracking-tight">{post.title}</h1>
-        <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="mt-2 text-sm text-accent/60 dark:text-accent/50">
           {new Date(post.date).toLocaleDateString(undefined, {
             year: "numeric",
             month: "long",
@@ -63,7 +63,7 @@ export default async function PostPage({
         )}
 
         <div
-          className="prose prose-zinc mt-8 max-w-none dark:prose-invert prose-a:text-accent prose-a:no-underline hover:prose-a:underline"
+          className="prose prose-lg prose-zinc mt-8 max-w-none dark:prose-invert prose-a:text-accent prose-a:no-underline hover:prose-a:underline"
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
       </article>
