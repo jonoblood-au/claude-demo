@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Python venv for the webapp-testing skill's Playwright helper — its
+    // vendored Node.js driver bundle isn't part of this project's source.
+    ".venv/**",
   ]),
 ]);
 

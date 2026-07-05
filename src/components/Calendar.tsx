@@ -153,7 +153,7 @@ export function Calendar({ entries }: { entries: CalendarEntry[] }) {
             >
               {day}
               {entry.posts.length > 1 && (
-                <span className="absolute -bottom-1 -right-1 rounded-full bg-zinc-900 px-1 text-[10px] leading-tight text-white dark:bg-zinc-100 dark:text-zinc-900">
+                <span className="absolute -bottom-1 -right-1 rounded-full bg-background px-1 text-[10px] leading-tight text-accent ring-1 ring-accent/30">
                   +{entry.posts.length}
                 </span>
               )}
