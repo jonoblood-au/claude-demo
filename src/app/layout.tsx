@@ -36,21 +36,22 @@ export default function RootLayout({
         <Script id="set-theme" strategy="beforeInteractive">
           {noFlashThemeScript()}
         </Script>
-        <header className="border-b border-black/[.08] dark:border-white/[.145]">
+        <header className="sticky top-0 z-10 border-b border-black/[.08] bg-background/80 backdrop-blur-md dark:border-white/[.145]">
           <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
-            <Link href="/" className="text-lg font-semibold tracking-tight">
+            <Link href="/" className="flex items-center gap-2 text-lg font-semibold tracking-tight">
+              <span className="inline-block h-2.5 w-2.5 rounded-full bg-gradient-to-br from-accent to-accent-secondary" />
               AI Blog
             </Link>
             <nav className="flex items-center gap-4">
               <Link
                 href="/archive"
-                className="text-sm text-zinc-600 hover:underline dark:text-zinc-300"
+                className="text-sm text-zinc-600 transition-colors hover:text-accent dark:text-zinc-300 dark:hover:text-accent"
               >
                 Archive
               </Link>
               <Link
                 href="/tags"
-                className="text-sm text-zinc-600 hover:underline dark:text-zinc-300"
+                className="text-sm text-zinc-600 transition-colors hover:text-accent dark:text-zinc-300 dark:hover:text-accent"
               >
                 Tags
               </Link>
