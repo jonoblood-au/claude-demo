@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:e2e": "python3 .claude/skills/webapp-testing/scripts/with_server.py --server \"npm run dev\" --port 3000 -- python3 tests/smoke.py"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
