@@ -37,7 +37,10 @@ export default async function PostPage({
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-6 py-16">
-      <Link href="/" className="text-sm text-zinc-500 hover:underline dark:text-zinc-400">
+      <Link
+        href="/"
+        className="text-sm text-zinc-500 transition-colors hover:text-accent dark:text-zinc-400 dark:hover:text-accent"
+      >
         ← Back to all posts
       </Link>
 
@@ -60,7 +63,7 @@ export default async function PostPage({
         )}
 
         <div
-          className="prose prose-zinc mt-8 max-w-none dark:prose-invert"
+          className="prose prose-zinc mt-8 max-w-none dark:prose-invert prose-a:text-accent prose-a:no-underline hover:prose-a:underline"
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
       </article>

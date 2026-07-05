@@ -36,7 +36,10 @@ export default async function TagPage({
 
   return (
     <main className="mx-auto w-full max-w-3xl flex-1 px-6 py-16">
-      <Link href="/tags" className="text-sm text-zinc-500 hover:underline dark:text-zinc-400">
+      <Link
+        href="/tags"
+        className="text-sm text-zinc-500 transition-colors hover:text-accent dark:text-zinc-400 dark:hover:text-accent"
+      >
         ← All tags
       </Link>
 

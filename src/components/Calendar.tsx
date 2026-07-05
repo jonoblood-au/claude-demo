@@ -129,7 +129,7 @@ export function Calendar({ entries }: { entries: CalendarEntry[] }) {
 
           const baseClasses =
             "flex aspect-square items-center justify-center rounded-md text-sm";
-          const todayRing = isToday ? "ring-1 ring-inset ring-zinc-400 dark:ring-zinc-500" : "";
+          const todayRing = isToday ? "ring-1 ring-inset ring-accent" : "";
 
           if (!entry) {
             return (
@@ -149,11 +149,11 @@ export function Calendar({ entries }: { entries: CalendarEntry[] }) {
               key={dateKey}
               href={href}
               title={entry.posts.map((p) => p.title).join(", ")}
-              className={`${baseClasses} ${todayRing} relative bg-zinc-900 font-medium text-zinc-50 hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white`}
+              className={`${baseClasses} ${todayRing} relative bg-gradient-to-br from-accent to-accent-secondary font-medium text-white transition-opacity hover:opacity-80`}
             >
               {day}
               {entry.posts.length > 1 && (
-                <span className="absolute -bottom-1 -right-1 rounded-full bg-zinc-500 px-1 text-[10px] leading-tight text-white">
+                <span className="absolute -bottom-1 -right-1 rounded-full bg-zinc-900 px-1 text-[10px] leading-tight text-white dark:bg-zinc-100 dark:text-zinc-900">
                   +{entry.posts.length}
                 </span>
               )}
